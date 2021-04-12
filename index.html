@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+
+        <meta charset="utf-8">
+        <title>FitNoter</title>
+        <link rel="manifest" href="manifest.json">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
+        <link rel="apple-touch-icon" href="icons/expensor.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+        <meta name="theme-color" content="white"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="FitNoter">
+        <meta name="msapplication-TileImage" content="icons/manifest-icon-192.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+        <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCvFGdaQk24s7soLDKAkSCHnLTxoKKVzG8",
+            authDomain: "fitnoter.firebaseapp.com",
+            projectId: "fitnoter",
+            storageBucket: "fitnoter.appspot.com",
+            messagingSenderId: "993657015233",
+            appId: "1:993657015233:web:7bf6d4fbaa9a526de5bd40"
+        };
+        firebase.initializeApp(firebaseConfig);
+        </script>
+    </head>
+
+    <body>
+        <div id="sign-in">
+            <button id="signInBtn" class="btn btn-primary"><i class="fab fa-google"></i> Sign in</button>
+        </div>
+        <section id="content" hidden>
+            <div id="app-content"></div>
+            <div id="menu">
+                <button id="workout" onclick="navigate('workout')"><i class="fas fa-dumbbell"></i></button>
+                <button id="exercises" onclick="navigate('exercises')"><i class="fas fa-tachometer-alt"></i></button>
+                <button id="add-item" onclick="addOrEditItemModal(-1)"> <i class="fas fa-plus"></i></button>
+                <button id="graphs" onclick="navigate('graphs')"><i class="fas fa-chart-pie"></i></button>
+                <button id="signOutBtn" class="btn btn-primary"><i class="fas fa-sign-out-alt"></i></button>
+
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="script/app.js"></script>
+        <script src="script/workout.js"></script>
+        <script src="script/exercises.js"></script>
+        <script src="script/graph.js"></script>
+    </body>
+
+</html>

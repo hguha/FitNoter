@@ -1,0 +1,8 @@
+<div class="upper-nav">
+    <a id="filter" onclick="changeWorkoutDate(-1)"> <i class="fas fa-chevron-left"></i> </a>
+    <a onclick="datePicker()" id="workout-date"></a>
+    <a id="filter" onclick="changeWorkoutDate(1)"> <i class="fas fa-chevron-right"></i> </a>
+</div>
+<div id="workout-list"></div>
+
+<script>renderList(workoutData)</script>

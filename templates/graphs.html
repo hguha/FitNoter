@@ -1,0 +1,18 @@
+<div class="upper-nav">
+    <a class="graph-filter active" onclick="updateChartFilter(-6, this)">W</a>
+    <a class="graph-filter" onclick="updateChartFilter(-30, this)">M</a>
+    <a class="graph-filter" onclick="updateChartFilter(-364, this)">Y</a>
+</div>
+<div id="graphs-container">
+    <h1>Volume Over Time</h1>
+    <canvas id="overall-chart"></canvas>
+
+    <h1>Exercise Weight Over Time</h1>
+    <select onchange="updateWeightChart()" id="exercise-graph-selector"> </select>
+    <canvas id="exercises-chart"></canvas>
+
+    <h1>Proportion Worked Out</h1>
+    <canvas id="proportion-chart"></canvas>
+</div>
+<script>loadGraphs()</script>
+
